@@ -4,7 +4,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
 import org.springframework.stereotype.Component;
+
+import java.util.UUID;
 
 @Entity
 @Table(name = "evidencia_credito")
@@ -14,7 +17,9 @@ public class Evidencia {
     @Id
     @Column(name = "id_evidencia")
     private Long idEvidencia;
-    private String tipoArchivo;
+
+
+    //private String tipoArchivo;
     private String archivoEvidencia;
 
     private String fotoSolicitante;

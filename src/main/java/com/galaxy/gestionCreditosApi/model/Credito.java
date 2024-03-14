@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.UUID;
+
 @Entity
 @Table(name = "creditos_galaxy")
 @Data
@@ -18,6 +20,7 @@ public class Credito {
     private Float calculoIntereses;
     private String fecha;
     private String motivoCredito;
+    private Integer isAproved;
 
     @ManyToOne
     @JoinColumn(name = "id_cliente", referencedColumnName = "id_cliente")

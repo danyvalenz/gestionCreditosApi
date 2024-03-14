@@ -7,6 +7,7 @@ import com.galaxy.gestionCreditosApi.model.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class ClienteServiceImpl {
@@ -19,7 +20,7 @@ public class ClienteServiceImpl {
         return clienteRepository.findAll();
     }
 
-    public Cliente findById(Long idCliente){
+    public Cliente findById(UUID idCliente){
         return clienteRepository.findById(idCliente).orElse(new Cliente());
     }
 

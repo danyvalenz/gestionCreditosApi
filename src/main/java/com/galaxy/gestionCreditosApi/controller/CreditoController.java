@@ -4,6 +4,8 @@ import com.galaxy.gestionCreditosApi.model.Credito;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.UUID;
+
 public class CreditoController {
 
 
